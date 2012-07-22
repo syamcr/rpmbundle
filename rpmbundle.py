@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+#Syam Krishnan C.R.
+#syamcr at gmail dot com
+
+
 import os
 import rpm
 import glob
@@ -32,8 +36,10 @@ keep_list   = list()
 del_list    = list()
 
 
+file_list = glob.glob("*.rpm")
+file_list.sort()
 
-for rpm_file in glob.glob("*.rpm"):
+for rpm_file in file_list:
 	
 	h  = readRpmHeader(ts, rpm_file)
 	ds = h.dsOfHeader()
